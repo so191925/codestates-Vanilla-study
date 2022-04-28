@@ -128,3 +128,5 @@ console.log(result);
 - Math.abs() : 절대값
 - Math.min() : 최소값
 - Math.max() : 최대값
+
+🏆  Pair : 조은영님
