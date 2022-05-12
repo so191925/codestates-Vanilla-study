@@ -52,7 +52,7 @@
 - 선언구분자 : 속성과 값의 끝에 `;` (세미콜론)을 붙혀서 속성을 구분한다.
 
 <p align="center">
-  <img src="../img/css-content.png" alt="html" width="500px" height="300px"/>
+  <img src="./img/css-content.png" alt="html" width="500px" height="300px"/>
 </p>
 
 ### 🧩 셀렉터 id와 class의 차이점
@@ -143,7 +143,7 @@ inline 모델은 요소들의 크기에 비례해 공간을 차지하는 특성�
 - content : 박스를 구성하는 자식 태그들의 요소를 나타낸다.
 
 <p align="center">
-  <img src="../img/box-model.png" alt="html" width="500px" height="300px"/>
+  <img src="./img/box-model.png" alt="html" width="500px" height="300px"/>
 </p>
 
 ### 🧩 박스 요소 사용법
@@ -233,7 +233,7 @@ p {
 - border-box : width의 넓이를 padding과 border를 합친 값으로 설정한다. 레이아웃의 크기를 width만 생각하면 되므로 권장하는 방법이다.
 
 <p align="center">
-  <img src="../img/border-box.png" alt="html" width="500px" height="300px"/>
+  <img src="./img/border-box.png" alt="html" width="500px" height="300px"/>
 </p>
 
 ## CSS Selector
