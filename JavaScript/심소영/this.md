@@ -44,8 +44,8 @@ printThis(); // 콘솔 각각 window, false가 출력된다. this가 달라졌�
 ## 예외의 경우
 
 1. 전역스코프에서 this는 window객체이다.
-<!-- 2. 화살표함수에서는 this가 조금 달라진다. 
-3. Strict Mode에서는 this가 조금 달라진다. --> 작성중
+2. 화살표함수에서는 this가 조금 달라진다. ///작성중
+3. Strict Mode에서는 this가 조금 달라진다. ///작성중
 
 
 ## bind : this를 원하는대로 설정할 수 있는 메서드 
