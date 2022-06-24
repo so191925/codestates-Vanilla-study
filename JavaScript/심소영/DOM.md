@@ -1,20 +1,28 @@
 
-
 # DOM
 ## DOM이란?
 
->Document Object Model의 약자로,   
-HTML 요소를 Object(JavaScript Object)처럼 조작(Manipulation)할 수 있는 Model이다.   
-즉, JavaScript를 사용할 수 있으면, DOM으로 HTML을 조작할 수 있다.
+>Document Object Model의 약자로,문서 객체 모델이라는 의미다.   
+ HTML문서를 객체화해서 자바스크립트로 접근할수 있게 한다.      
+자바스크립트는 HTML문서를 조작하기위해 생겨난 언어이다.
+즉, JavaScript를 사용할 수 있으면, DOM으로 HTML을 조작할 수 있다.   
+>
+>DOM을 구성하는 각 객체는 node라고 하며 트리구조로 이루어져 있다. 부모 자식 형제의 형태로
+최상위 노드는 document이다.
 
+[돔 트리]
+![img](https://miro.medium.com/max/1088/1*NA2VKR09ECb8PEgYDteR3w.gif)
 ## DOM과 Javascript의 차이  
 
- 
- DOM은 JavaScript 언어의 일부가 아니라 웹사이트를 구축하는 데 사용되는 Web API이다.
 
- DOM은 프로그래밍 언어가 아니지만 DOM이 없으면 JS언어에 웹페이지, HTML문서, SVG 문서 및 구성 요소 부분에 대한 모델이나 개념이 없다. 
- 
- 문서 전체, 헤드, 문서 내의 테이블, 테이블 헤더, 테이블 셀 내의 텍스트 및 문서의 기타 모든 요소는 해당 문서에 대한 문서 개체 모델의 일부이다.
+>DOM은 JavaScript 언어의 일부가 아니라 웹사이트를 구축하는 데 사용되며 브라우저에서 제공되는 Web API이다.   
+>
+>API는 손님(프로그램)이 주문할 수 있게 메뉴(명령 목록)를 정리하고, 주문(명령)을 받으면 요리사(응용프로그램)와 상호작용하여 요청된 메뉴(명령에 대한 값)를 전달한다.
+>API는 프로그램들이 서로 상호작용하는 것을 도와주는 매개체로 볼 수 있다.
+>
+>DOM은 프로그래밍 언어가 아니지만 DOM이 없으면 JS언어에 웹페이지, HTML문서, SVG 문서 및 구성 요소 부분에 대한 모델이나 개념이 없다. 
+> 
+> 문서 전체, 헤드, 문서 내의 테이블, 테이블 헤더, 테이블 셀 내의 텍스트 및 문서의 기타 모든 태그요소는 해당 문서에 대한 문서 객체 모델의 일부이다.
 
 #
 
@@ -27,7 +35,6 @@ HTML 요소를 Object(JavaScript Object)처럼 조작(Manipulation)할 수 있�
 ```javascript
     <script src="myScriptFile.js"></script>
 
-    
 ```
 [**script 요소는 등장과 함께 실행된다.**]   
 
@@ -50,7 +57,7 @@ HTML 요소를 Object(JavaScript Object)처럼 조작(Manipulation)할 수 있�
 ## 1. head 요소에 추가
 
 장점 : 웹사이트가 완벽한 형태로 보여진다.   
-단점 : JS파일의 사이즈가 크고 인터넷이 느릴 경우, 사용자가 웹사이트를 보는 데까지
+단점 : 앞에 위치한 헤드요소를 읽다가 JS파일을 불러오므로 JS파일의 사이즈가 크고 인터넷이 느릴 경우, 사용자가 웹사이트를 보는 데까지
         많은 시간이 소요된다.
 
 ![img](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FLvymi%2FbtqGdEJUAMi%2FOol7KH4M8RgLmZ4Mrf4ha1%2Fimg.png)
@@ -87,8 +94,6 @@ HTML parsing을 재개.
 HTML이 parsing을 끝낸 다음. JS를 fetching 후, 실행.
 
 
-
-
 ```js
 // 2. /body가 끝나기 전에 추가
 
@@ -112,6 +117,7 @@ HTML이 parsing을 끝낸 다음. JS를 fetching 후, 실행.
 ```
 
 javscript에서 DOM은 document객체에 구현되어있다.
+가장 상위
 따라서 브라우저 속에서 작동되는 자바스크립트코드는 항상 document 객체를 조회할 수 있다.
 
 ```
@@ -175,12 +181,12 @@ javscript에서 DOM은 document객체에 구현되어있다.
 
 ### 예시자료
 
-```id의 이름이 news-contents 인 <div> 요소의 부모 요소는 무엇인가?```
+id의 이름이 news-contents 인 <div> 요소의 부모 요소는 무엇인가?
 
 
 ![img](https://s3.ap-northeast-2.amazonaws.com/urclass-images/IqsTy4eUg-1597038630933.png)
 
-```[그림] id가 news-contents 인 <div>요소와 <body> 요소의 관계```
+[그림] id가 news-contents 인 <div>요소와 <body> 요소의 관계
 
 id가 news-contents 인 div 요소는 <body> 요소의 자식 요소이다.   
 반대로 <body> 요소는 id가 news-contents div 요소의 부모 요소이다.   
@@ -212,16 +218,12 @@ if (node.parentElement) {
 #
 ## 📌 CRUD 와 ARREND
 
->### C (create) 
->DOM을 JavaScript로 조작하여 HTML Element를 추가할 수 있다.   
->### R (read)
->DOM을 JavaScript로 조작하여 HTML Element를 조회할 수 있다.
->### U (update)
->DOM을 JavaScript로 조작하여 HTML Element를 변경할 수 있다.
->### D (delete)
->DOM을 JavaScript로 조작하여 HTML Element를 삭제할 수 있다. 
->### (APPEND)
->생성한 HTML Element를 부모 엘리먼트의 자식 엘리먼트로 포함할 수 있다. 
+> C (create)   
+> R (read)   
+> U (update)   
+> D (delete)   
+> (APPEND)
+
 #
 
 ## 0. append
@@ -312,7 +314,44 @@ while (container.children.length > 1) {
 }
 //container의 자식 요소가 1개만 남을 때까지, 마지막 자식 요소를 제거합니다.
 ```
+#
 
+## 📌노드의 종류
+
+* 문서 노드(document node):	HTML 문서 전체를 나타내는 노드 =	#document
+* 요소 노드(element node):	모든 HTML 요소는 요소 노드이며, 속성 노드를 가질 수 있는 유일한 노드 =	태그 이름(대문자)
+* 속성 노드(attribute node):	모든 HTML 요소의 속성은 속성 노드이며, 요소 노드에 관한 정보를 가짐. =	속성 이름
+* 텍스트 노드(text node):	HTML 문서의 모든 텍스트는 텍스트 노드	= #text
+* 주석 노드(comment node):	HTML 문서의 모든 주석은 주석 노드 =	#comment
+
+
+## 노드간의 관계
+![img](https://blog.kakaocdn.net/dn/I9js5/btrdxoH5FeZ/x5pmsFnwvIO5C2tSXg0Xik/img.png)
+
+## 문서 노드
+
+## 요소 노드
+
+## 속성 노드 다루기
+
+속성 노드는 요소 노드에 관한 정보를 가지고있다.  
+메서드를 통해 확인, 생성, 삭제가 가능하다. 
+
+- element.prototype.getAttribute(속성명):속성 노드의 값 접근
+- element.prototype.setAttribute(속성명, value):속성 노드의 값을 수정
+- element.prototype.removeAttribute(속성명):속성 노드의 값을 삭제
+- elemnet.prototype.hasAttribute(속성명): 속성 노드의 값이 존재하는지 확인
+
+```js
+let test = document.getElementsByTagName('p')[0];
+    // html에서 해당 요소 모두 선택
+
+    test.setAttribute("style","color : red; font-size : 50px");
+```
+
+## 텍스트 노드
+
+## 주석 노드
 
 
 #
